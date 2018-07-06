@@ -1,5 +1,6 @@
-PATH
-  remote: ../digital-nsw-template
+GIT
+  remote: https://github.com/digitalnsw/digital-nsw-template.git
+  revision: 4c5bec7aaf8f341cd3c43a16e57243f5500d32c7
   specs:
     digital-nsw-template (0.0.1)
       bootstrap (~> 4.0.0)
