@@ -1,0 +1,70 @@
+<article>
+  <h1>Forms</h1>
+
+  <fieldset>
+    <div class="form-group">
+      <label for="example">What is your name?</label>
+      <small class="form-text text-muted" id="example-hint">
+        Some explanatory text to describe the field
+      </small>
+      <input type="text" name="example" id="example" class="form-control" aria-describedby="example-hint">
+    </div>
+
+    <div class="form-group">
+      <label for="textarea">Write a short story</label>
+      <textarea name="textarea" id="textarea" rows="4" class="form-control"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group radio_buttons">
+    <legend>Are these radio buttons?</legend>
+
+    <div class="form-check">
+      <input type="radio" name="radio" id="radio-yes" class="form-control">
+      <label for="radio-yes">Yes</label>
+    </div>
+
+    <div class="form-check">
+      <input type="radio" name="radio" id="radio-no" class="form-control">
+      <label for="radio-no">No</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group check_boxes">
+    <legend>Select options</legend>
+
+    <div class="form-check">
+      <input type="checkbox" name="checkbox" id="checkbox-one" class="form-control" aria-describedby="checkbox-one-hint">
+      <label for="checkbox-one">Option one</label>
+      <small class="form-text text-muted" id="checkbox-one-hint">
+        Some explanatory text about this option
+      </small>
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" name="checkbox" id="checkbox-two" class="form-control">
+      <label for="checkbox-two">Option two</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group date-field">
+    <legend>Please enter your date of birth</legend>
+
+    <div class="form-group">
+      <label for="date-day">Day</label>
+      <input type="text" name="date-day" id="date-day" class="form-control day">
+    </div>
+    <div class="form-group">
+      <label for="date-month">Month</label>
+      <input type="text" name="date-month" id="date-month" class="form-control month">
+    </div>
+    <div class="form-group">
+      <label for="date-year">Year</label>
+      <input type="text" name="date-year" id="date-year" class="form-control year">
+    </div>
+  </fieldset>
+
+  <fieldset class="actions">
+    <button type="submit">Next</button>
+  </fieldset>
+</article>
