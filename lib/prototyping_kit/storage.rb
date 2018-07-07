@@ -18,7 +18,6 @@ module PrototypingKit
       before do
         if params.any?
           session['data'] = (session['data'] || {}).merge(params)
-          # p params
         end
       end
 
