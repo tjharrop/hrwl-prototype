@@ -1,0 +1,29 @@
+<article>
+  <h1>Error messages</h1>
+
+  <h2>Inline error messages</h2>
+
+  <fieldset>
+    <div class="form-group">
+      <label for="example">What is your name?</label>
+      <small class="form-text text-muted" id="example-hint">
+        Some explanatory text to describe the field
+      </small>
+      <input type="text" name="example" id="example" class="form-control is-invalid" aria-describedby="example-hint example-error" aria-invalid="true">
+      <div class="invalid-feedback">
+        <div id="example-error">Please fill in this field</div>
+      </div>
+    </div>
+  </fieldset>
+
+  <h2>Block error messages</h2>
+
+  <div class="block-error" role="alert" tabindex="-1">
+    <h2>There was a problem with your answers to</h2>
+
+    <ul class="invalid-fields-list">
+      <li>What is your name?</li>
+      <li>What is your email address?</li>
+    </ul>
+  </div>
+</article>
