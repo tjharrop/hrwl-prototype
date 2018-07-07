@@ -6,6 +6,14 @@ class App < PrototypingKit::App
   #
   include PrototypingKit::Patterns
 
+  # This includes an example flow. You can see the code and views for this
+  # example in the following files:
+  #
+  # - lib/prototyping_kit/example.rb
+  # - lib/prototyping_kit/views/example/
+  #
+  include PrototypingKit::Example
+
   get "/" do
     erb :index
   end

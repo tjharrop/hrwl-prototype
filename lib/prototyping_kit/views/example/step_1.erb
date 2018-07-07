@@ -1,0 +1,27 @@
+<article>
+  <h1>Your driver's licence</h1>
+
+  <p>Your driver's licence is used to check your eligibility to hold a fishing license.</p>
+
+  <form action="/example/step-2" method="get">
+    <fieldset>
+      <div class="form-group">
+        <label for="drivers-licence-number">Enter your driver's license number</label>
+        <small class="form-text text-muted" id="drivers-licence-number-hint">
+          Find this on the top-right of your license. It looks like AA 123 456 78.
+        </small>
+        <input type="text"
+                name="drivers_licence_number"
+                id="drivers-licence-number"
+                class="form-control"
+                style="width: 10rem;"
+                value="<%= data[:drivers_licence_number] %>"
+                aria-describedby="drivers-licence-number-hint">
+      </div>
+    </fieldset>
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+  </form>
+</article>

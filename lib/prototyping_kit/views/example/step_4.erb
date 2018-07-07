@@ -1,0 +1,37 @@
+<article>
+  <h1>Check your details</h1>
+
+  <p>Please confirm that the following details are correct before submitting your application.</p>
+
+  <dl class="check-answers">
+    <dt>Name</dt>
+    <dd>
+      <%= data[:name] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Date of birth</dt>
+    <dd>
+      <%= data[:date_day] %>/<%= data[:date_month] %>/<%= data[:date_year] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Driver's licence number</dt>
+    <dd>
+      <%= data[:drivers_licence_number] %>
+      <a href="/example/step-1" class="change-link">Change</a>
+    </dd>
+
+    <dt>Angling certificate number</dt>
+    <dd>
+      <%= data[:angling_certificate_number] %>
+      <a href="/example/step-2" class="change-link">Change</a>
+    </dd>
+  </dl>
+
+  <form action="/example/submitted" method="get">
+    <fieldset class="actions">
+      <button type="submit">Submit application</button>
+    </fieldset>
+  </form>
+</article>

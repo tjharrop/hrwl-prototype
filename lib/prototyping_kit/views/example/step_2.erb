@@ -1,0 +1,27 @@
+<article>
+  <h1>Your angling certificate</h1>
+
+  <p>Your angling certificate proves you can fish responsibly in New South Wales. If you don't have a certificate, you can <a href="">complete a course online</a> at an accredited institution.</p>
+
+  <form action="/example/step-3" method="get">
+    <fieldset>
+      <div class="form-group">
+        <label for="angling-certificate-number">Enter your angling certificate number</label>
+        <small class="form-text text-muted" id="angling-certificate-number-hint">
+          You can find this on the certificate from your training course. It's a 10-digit number.
+        </small>
+        <input type="text"
+                name="angling_certificate_number"
+                id="angling-certificate-number"
+                class="form-control"
+                style="width: 15rem;"
+                value="<%= data[:angling_certificate_number] %>"
+                aria-describedby="angling-certificate-number-hint">
+      </div>
+    </fieldset>
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+  </form>
+</article>
