@@ -33,7 +33,7 @@ It is easy to save values submitted by users for use later. By default, all para
 For example, the following code will save the value of the text field and pre-fill the value on future requests:
 
 ```erb
-<input type="text" name="address" value="<%= data[:address]">
+<input type="text" name="address" value="<%= data[:address] %>">
 <button type="submit">Save</button>
 ```
 
