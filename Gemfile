@@ -6,6 +6,7 @@ else
   gem 'digital-nsw-template', git: 'https://github.com/digitalnsw/digital-nsw-template.git'
 end
 
+gem 'activesupport'
 gem 'foreman'
 gem 'puma'
 gem 'sinatra'
