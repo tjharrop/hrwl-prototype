@@ -26,6 +26,21 @@ To make changes to the application, edit `app.rb`.
 
 ## Technical documentation
 
+### Storing user data for a session
+
+It is easy to save values submitted by users for use later. By default, all parameters sent in a request are saved to the current user's session. You can access them through the `data` helper method.
+
+For example, the following code will save the value of the text field and pre-fill the value on future requests:
+
+```erb
+<input type="text" name="address" value="<%= data[:address]">
+<button type="submit">Save</button>
+```
+
+See the example user journey in `lib/prototyping_kit/views/example/` for a demonstration.
+
+To clear all saved data from the current session, visit `/reset-data` in the browser.
+
 ### Using assets
 
 Assets in the `assets/stylesheets`, `assets/javascripts` and `assets/images` directories are automatically compiled into `/assets` on the server.
