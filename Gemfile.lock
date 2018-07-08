@@ -65,7 +65,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport
+  activesupport (~> 5.2.0)
   digital-nsw-template!
   foreman
   puma
