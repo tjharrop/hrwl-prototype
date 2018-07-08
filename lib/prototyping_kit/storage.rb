@@ -11,13 +11,15 @@ module PrototypingKit
 
       helpers do
         def data
-          session['data'] || {}
+          session['data'].with_indifferent_access
         end
       end
 
       before do
+        session['data'] ||= {}
+
         if params.any?
-          session['data'] = (session['data'] || {}).merge(params)
+          session['data'] = session['data'].merge(params)
         end
       end
 
