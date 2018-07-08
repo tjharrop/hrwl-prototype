@@ -10,7 +10,7 @@ module PrototypingKit
       get '/patterns/:page' do |page|
         view = page.underscore
 
-        if File.exists?(File.join(patterns_view_path, "#{view}.erb"))
+        if File.exists?(File.join(internal_view_path('patterns'), "#{view}.erb"))
           render_internal_view 'patterns', view
         else
           head 404
