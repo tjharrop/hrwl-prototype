@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 if ENV['TEMPLATE_DEV']
-  gem 'digital-nsw-template', path: '../digital-nsw-template'
+  gem 'digital_nsw_template', path: '../digital_nsw_template'
 else
-  gem 'digital-nsw-template', git: 'https://github.com/digitalnsw/digital-nsw-template.git'
+  gem 'digital_nsw_template', git: 'https://github.com/digitalnsw/digital_nsw_template.git'
 end
 
 gem 'activesupport', '~> 5.2.0'

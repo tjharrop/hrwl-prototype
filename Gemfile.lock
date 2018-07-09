@@ -1,8 +1,8 @@
 GIT
-  remote: https://github.com/digitalnsw/digital-nsw-template.git
-  revision: 4c5bec7aaf8f341cd3c43a16e57243f5500d32c7
+  remote: https://github.com/digitalnsw/digital_nsw_template.git
+  revision: 0f3039d9058b8788de1b7b3e629c721909cf48e8
   specs:
-    digital-nsw-template (0.0.1)
+    digital_nsw_template (0.0.1)
       bootstrap (~> 4.0.0)
       sass (>= 3.5.2)
       sprockets (>= 3.7.0)
@@ -58,7 +58,7 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.9)
+    uglifier (4.1.14)
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
@@ -66,7 +66,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (~> 5.2.0)
-  digital-nsw-template!
+  digital_nsw_template!
   foreman
   puma
   shotgun
