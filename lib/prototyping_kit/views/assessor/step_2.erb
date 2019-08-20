@@ -1,0 +1,26 @@
+<article>
+  <h1>Assessment details</h1>
+
+  <form action="/assessor/step-3" method="get">
+
+    <fieldset>
+      <div class="form-group">
+        <label for="drivers-licence-number">Enter the unique assessment number</label>
+        <small class="form-text text-muted" id="drivers-licence-number-hint">
+          The assessment number was generated when the RTO told SafeWork about the assessment.
+        </small>
+        <input type="text"
+                name="applicant-usi"
+                id="applicant-usi"
+                class="form-control"
+                style="width: 20rem;"
+                value="<%= data[:applicant_usi] %>"
+                aria-describedby="applicant-usi-hint">
+      </div>
+    </fieldset>
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+  </form>
+</article>

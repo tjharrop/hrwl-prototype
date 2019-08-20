@@ -23,6 +23,10 @@ module PrototypingKit
         render_internal_view 'example', :step_4
       end
 
+      get '/example/step-5' do
+        render_internal_view 'example', :step_5
+      end
+
       get '/example/submitted' do
         render_internal_view 'example', :submitted
       end

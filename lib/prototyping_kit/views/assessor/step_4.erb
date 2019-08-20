@@ -1,0 +1,44 @@
+<article>
+  <h1>Equipment owner</h1>
+
+  <form action="/assessor/step-5" method="get">
+
+    <fieldset>
+      <div class="form-group">
+        <label for="equipment-owner-name">Who owns the equipment?</label>
+        <input type="text"
+                name="equipment_owner_name"
+                id="equipment-owner-name"
+                class="form-control"
+                value="<%= data[:equipment_owner_name] %>">
+      </div>
+
+    <div class="form-group">
+      <label for="equipment-owner-phone">What is the owner's contact number?</label>
+      <input type="text"
+              name="equipment_owner_phone"
+              id="equipment-owner-phone"
+              class="form-control"
+              value="<%= data[:equipment_owner_phone] %>">
+    </div>
+
+  <div class="form-group">
+    <label for="equipment-owner-address">What is the equipment owner's address?</label>
+    <textarea type="text"
+            name="equipment_owner_address"
+            id="equipment-owner-address"
+            class="form-control"
+            value="<%= data[:equipment_owner_address] %>">
+    </textarea>
+  </div>
+
+
+</fieldset>
+
+
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+  </form>
+</article>

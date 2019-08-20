@@ -13,6 +13,8 @@ class App < PrototypingKit::App
   # - lib/prototyping_kit/views/example/
   #
   include PrototypingKit::Example
+  include PrototypingKit::Assessor
+  include PrototypingKit::Nirvana
 
   get "/" do
     erb :index

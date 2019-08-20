@@ -1,37 +1,38 @@
 <article>
-  <h1>Check your details</h1>
+  <h1>Previous licenses</h1>
 
-  <p>Please confirm that the following details are correct before submitting your application.</p>
+  <form action="/example/step-5" method="get">
 
-  <dl class="check-answers">
-    <dt>Name</dt>
-    <dd>
-      <%= data[:name] %>
-      <a href="/example/step-3" class="change-link">Change</a>
-    </dd>
+    <fieldset class="form-group radio_buttons">
+      <legend>Have you previously been issued with an Assessment Summary (AS) by an accredited assessor for the HRW licence class(es) to which this application applies?</legend>
 
-    <dt>Date of birth</dt>
-    <dd>
-      <%= data[:date_day] %>/<%= data[:date_month] %>/<%= data[:date_year] %>
-      <a href="/example/step-3" class="change-link">Change</a>
-    </dd>
+      <div class="form-check">
+        <input type="radio" name="as" id="as-yes" class="form-control" value="y">
+        <label for="radio-yes">Yes</label>
+      </div>
 
-    <dt>Driver's licence number</dt>
-    <dd>
-      <%= data[:drivers_licence_number] %>
-      <a href="/example/step-1" class="change-link">Change</a>
-    </dd>
+      <div class="form-check">
+        <input type="radio" name="as" id="as-no" class="form-control" value="n">
+        <label for="radio-no">No</label>
+      </div>
+    </fieldset>
 
-    <dt>Angling certificate number</dt>
-    <dd>
-      <%= data[:angling_certificate_number] %>
-      <a href="/example/step-2" class="change-link">Change</a>
-    </dd>
-  </dl>
+    <fieldset class="form-group radio_buttons">
+      <legend>Have you ever been issued with a Notice of Satisfactory Assessment (NSA) by an accredited assessor for an HRW licence class(es) to which this application applies?</legend>
 
-  <form action="/example/submitted" method="get">
+      <div class="form-check">
+        <input type="radio" name="prev" id="prev-yes" class="form-control" value="y">
+        <label for="radio-yes">Yes</label>
+      </div>
+
+      <div class="form-check">
+        <input type="radio" name="prev" id="prev-no" class="form-control" value="n">
+        <label for="radio-no">No</label>
+      </div>
+    </fieldset>
+
     <fieldset class="actions">
-      <button type="submit">Submit application</button>
+      <button type="submit">Next step</button>
     </fieldset>
   </form>
 </article>

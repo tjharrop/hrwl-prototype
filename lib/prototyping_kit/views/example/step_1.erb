@@ -1,22 +1,41 @@
 <article>
-  <h1>Your driver's licence</h1>
+  <h1>Your Unique Student Identifier (USI)</h1>
 
-  <p>Your driver's licence is used to check your eligibility to hold a fishing license.</p>
+  <p>If you've already enroled in a High Risk Work course with a Registered Training Organisation, enter the USI you used for enrollment.</p>
+  <p>If you've lost your Australian Government USI, you can <a href="https://www.usi.gov.au/students/">find it here</a>.</p>
 
   <form action="/example/step-2" method="get">
     <fieldset>
       <div class="form-group">
-        <label for="drivers-licence-number">Enter your driver's license number</label>
+        <label for="drivers-licence-number">Enter your unique student identifier</label>
         <small class="form-text text-muted" id="drivers-licence-number-hint">
-          Find this on the top-right of your license. It looks like AA 123 456 78.
+          Your USI is made up of numbers and letters, for example 099X99XX9
         </small>
         <input type="text"
-                name="drivers_licence_number"
-                id="drivers-licence-number"
+                name="applicant-usi"
+                id="applicant-usi"
                 class="form-control"
-                style="width: 10rem;"
-                value="<%= data[:drivers_licence_number] %>"
-                aria-describedby="drivers-licence-number-hint">
+                style="width: 20rem;"
+                value="<%= data[:applicant_usi] %>"
+                aria-describedby="applicant-usi-hint">
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group radio_buttons">
+      <legend>Enforcable undertakings</legend>
+      <small class="form-text text-muted" id="drivers-licence-number-hint">
+        Have you ever entered in to an agreement between any Australian health and safety regulator
+        Have you ever entered into an enforceable undertaking under WHS Act or WHS Regulation in NSW or work health and safety
+law in another state or territory? (An enforceable undertaking is an agreement between a work health and safety regulator and a person or company who may have committed an offence. For example the company may agree to undertake a specific program)
+      </small>
+      <div class="form-check">
+        <input type="radio" name="enforceable" id="enforceable-yes" class="form-control" value="y">
+        <label for="enforceable-yes">Yes</label>
+      </div>
+
+      <div class="form-check">
+        <input type="radio" name="enforceable" id="enforceable-no" class="form-control" value="n">
+        <label for="enforceable-no">No</label>
       </div>
     </fieldset>
 

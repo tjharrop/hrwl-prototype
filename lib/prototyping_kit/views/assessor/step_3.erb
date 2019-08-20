@@ -1,0 +1,50 @@
+<article>
+  <h1>Equipment information</h1>
+
+  <form action="/assessor/step-4" method="get">
+
+    <fieldset>
+      <div class="form-group">
+        <label for="equipment-type">What type of equipment are you using for this assessment?</label>
+        <input type="text"
+                name="equipment_type"
+                id="equipment-type"
+                class="form-control"
+                value="<%= data[:equipment_type] %>">
+      </div>
+
+    <div class="form-group">
+      <label for="equipment-make">What make is the equipment?</label>
+      <input type="text"
+              name="equipment_make"
+              id="equipment-make"
+              class="form-control"
+              value="<%= data[:equipment_make] %>">
+    </div>
+
+  <div class="form-group">
+    <label for="equipment-capacity">What is the equipment's capacity?</label>
+    <input type="text"
+            name="equipment_capacity"
+            id="equipment-capacity"
+            class="form-control"
+            value="<%= data[:equipment_capacity] %>">
+  </div>
+
+<div class="form-group">
+  <label for="equipment-serial">What is the equipment serial number?</label>
+  <input type="text"
+          name="equipment_serial"
+          id="equipment-serial"
+          class="form-control"
+          value="<%= data[:equipment_serial] %>">
+</div>
+</fieldset>
+
+
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+  </form>
+</article>

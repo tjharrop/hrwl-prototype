@@ -1,27 +1,77 @@
 <article>
-  <h1>Your angling certificate</h1>
+  <h1>Your details</h1>
 
-  <p>Your angling certificate proves you can fish responsibly in New South Wales. If you don't have a certificate, you can <a href="">complete a course online</a> at an accredited institution.</p>
+  <p>We need to collect some information for your license.</p>
 
   <form action="/example/step-3" method="get">
     <fieldset>
       <div class="form-group">
-        <label for="angling-certificate-number">Enter your angling certificate number</label>
-        <small class="form-text text-muted" id="angling-certificate-number-hint">
-          You can find this on the certificate from your training course. It's a 10-digit number.
+        <label for="name">What is your full name?</label>
+        <small class="form-text text-muted" id="name-hint">
+          Enter your full name, for example John Doe.
         </small>
         <input type="text"
-                name="angling_certificate_number"
-                id="angling-certificate-number"
+                name="name"
+                id="name"
                 class="form-control"
-                style="width: 15rem;"
-                value="<%= data[:angling_certificate_number] %>"
-                aria-describedby="angling-certificate-number-hint">
+                style="width: 30rem;"
+                value="<%= data[:name] %>"
+                aria-describedby="name-hint">
       </div>
     </fieldset>
+
+    <fieldset class="form-group date-field">
+      <legend>What is your date of birth?</legend>
+
+      <div class="form-group">
+        <label for="dob-day">Day</label>
+        <input type="text" name="dob_day" id="dob-day" value="<%= data[:dob_day] %>" class="form-control day">
+      </div>
+      <div class="form-group">
+        <label for="dob-month">Month</label>
+        <input type="text" name="dob_month" id="dob-month" value="<%= data[:dob_month] %>" class="form-control month">
+      </div>
+      <div class="form-group">
+        <label for="dob-year">Year</label>
+        <input type="text" name="dob_year" id="dob-year" value="<%= data[:dob_year] %>" class="form-control year">
+      </div>
+    </fieldset>
+
+        <fieldset>
+          <div class="form-group">
+            <label for="phone">Enter your phone number &#128222;</label>
+            <small class="form-text text-muted" id="phone-hint">
+              In case need to call you about your application.
+            </small>
+            <input type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control"
+                    style="width: 30rem;"
+                    value="<%= data[:phone] %>"
+                    aria-describedby="phone-hint">
+          </div>
+        </fieldset>
+
+            <fieldset>
+              <div class="form-group">
+                <label for="address">Enter your address</label>
+                <small class="form-text text-muted" id="address-hint">
+                  Your license will be sent here.
+                </small>
+                <input type="text"
+                        name="address"
+                        id="address"
+                        class="form-control"
+                        style="width: 30rem;"
+                        value="<%= data[:address] %>"
+                        aria-describedby="address-hint">
+              </div>
+            </fieldset>
 
     <fieldset class="actions">
       <button type="submit">Next step</button>
     </fieldset>
+
   </form>
 </article>

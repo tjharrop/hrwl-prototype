@@ -1,0 +1,110 @@
+<article>
+  <h1>Student details</h1>
+
+  <p>We need to collect some information for their license.</p>
+  <p><img src="https://lh3.googleusercontent.com/FarGrT_nY3cU1Cx_WFBAZhQDhhJSEb1aJD1TjEcDalCpohXUeNqIM8vVnIxgx2sA5Q=s180" style="float:left; height: 30px;">If the applicant has a Digital iD, please <a href="#">scan it now</a>.</p>
+  <p><img src="/assets/face.jpg" width="200px"></p>
+  <form action="/assessor/step-7" method="get">
+    <fieldset>
+      <div class="form-group">
+        <label for="name">What is their full name?</label>
+        <small class="form-text text-muted" id="name-hint">
+          Enter their full name, for example John Doe.
+        </small>
+        <input type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                style="width: 30rem;"
+                value="<%= data[:name] %>"
+                aria-describedby="name-hint">
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group date-field">
+      <legend>What is their date of birth?</legend>
+
+      <div class="form-group">
+        <label for="dob-day">Day</label>
+        <input type="text" name="dob_day" id="dob-day" value="<%= data[:dob_day] %>" class="form-control day">
+      </div>
+      <div class="form-group">
+        <label for="dob-month">Month</label>
+        <input type="text" name="dob_month" id="dob-month" value="<%= data[:dob_month] %>" class="form-control month">
+      </div>
+      <div class="form-group">
+        <label for="dob-year">Year</label>
+        <input type="text" name="dob_year" id="dob-year" value="<%= data[:dob_year] %>" class="form-control year">
+      </div>
+    </fieldset>
+
+        <fieldset>
+          <div class="form-group">
+            <label for="phone">Enter their phone number &#128222;</label>
+            <small class="form-text text-muted" id="phone-hint">
+              In case need to call them about their application.
+            </small>
+            <input type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control"
+                    style="width: 30rem;"
+                    value="<%= data[:phone] %>"
+                    aria-describedby="phone-hint">
+          </div>
+        </fieldset>
+
+
+                <fieldset>
+                  <div class="form-group">
+                    <label for="phone">Enter their email address</label>
+                    <small class="form-text text-muted" id="email-hint">
+                      This is optional.
+                    </small>
+                    <input type="text"
+                            name="email"
+                            id="email"
+                            class="form-control"
+                            style="width: 30rem;"
+                            value="<%= data[:email] %>"
+                            aria-describedby="email-hint">
+                  </div>
+                </fieldset>
+
+                    <fieldset>
+                      <div class="form-group">
+                        <label for="address">Enter their residential address</label>
+
+                        <input type="text"
+                                name="address"
+                                id="address"
+                                class="form-control"
+                                style="width: 30rem;"
+                                value="<%= data[:address] %>"
+                                aria-describedby="address-hint">
+                      </div>
+                    </fieldset>
+
+
+                                <fieldset>
+                                  <div class="form-group">
+                                    <label for="paddress">Enter their postal address</label>
+                                    <small class="form-text text-muted" id="address-hint">
+                                      You can leave this blank if it's the same as the residential address
+                                    </small>
+                                    <input type="text"
+                                            name="paddress"
+                                            id="paddress"
+                                            class="form-control"
+                                            style="width: 30rem;"
+                                            value="<%= data[:paddress] %>"
+                                            aria-describedby="address-hint">
+                                  </div>
+                                </fieldset>
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+
+  </form>
+</article>

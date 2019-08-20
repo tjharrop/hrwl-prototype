@@ -1,39 +1,26 @@
 <article>
-  <h1>Your personal details</h1>
-
-  <p>We need some more information to confirm your certificate.</p>
+  <h1>Your license history</h1>
 
   <form action="/example/step-4" method="get">
-    <fieldset>
-      <div class="form-group">
-        <label for="name">What is your name?</label>
-        <small class="form-text text-muted" id="name-hint">
-          Enter your name exactly as it appears on your angling certificate.
-        </small>
-        <input type="text"
-                name="name"
-                id="name"
-                class="form-control"
-                style="width: 30rem;"
-                value="<%= data[:name] %>"
-                aria-describedby="name-hint">
+
+    <fieldset class="form-group radio_buttons">
+      <legend>Have you had an Australian High Risk Work license suspended or cancelled since September 2013?</legend>
+
+      <div class="form-check">
+        <input type="radio" name="suspended" id="suspended-yes" class="form-control" value="y">
+        <label for="suspended-yes">Yes</label>
+      </div>
+
+      <div class="form-check">
+        <input type="radio" name="suspended" id="suspended-no" class="form-control" value="n">
+        <label for="suspended-no">No</label>
       </div>
     </fieldset>
 
-    <fieldset class="form-group date-field">
-      <legend>What is your date of birth?</legend>
-
+    <fieldset>
       <div class="form-group">
-        <label for="date-day">Day</label>
-        <input type="text" name="date_day" id="date-day" value="<%= data[:date_day] %>" class="form-control day">
-      </div>
-      <div class="form-group">
-        <label for="date-month">Month</label>
-        <input type="text" name="date_month" id="date-month" value="<%= data[:date_month] %>" class="form-control month">
-      </div>
-      <div class="form-group">
-        <label for="date-year">Year</label>
-        <input type="text" name="date_year" id="date-year" value="<%= data[:date_year] %>" class="form-control year">
+        <label for="example">Please tell us what happened</label>
+        <textarea name="suspended_details" id="textarea" rows="4" class="form-control"></textarea>
       </div>
     </fieldset>
 

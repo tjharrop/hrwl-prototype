@@ -1,0 +1,92 @@
+<article>
+  <h1>Check your details</h1>
+  <form action="/example/submitted" method="get">
+
+  <p>Please confirm that the following details are correct before submitting your application.</p>
+
+  <dl class="check-answers">
+    <dt>Name</dt>
+    <dd>
+      <%= data[:name] %>
+      <a href="/example/step-2" class="change-link">Change</a>
+    </dd>
+
+    <dt>Date of birth</dt>
+    <dd>
+      <%= data[:dob_day] %>/<%= data[:dob_month] %>/<%= data[:dob_year] %>
+      <a href="/example/step-2" class="change-link">Change</a>
+    </dd>
+
+    <dt>Phone number</dt>
+    <dd>
+      <%= data[:phone] %>
+      <a href="/example/step-2" class="change-link">Change</a>
+    </dd>
+
+    <dt>Address</dt>
+    <dd>
+      <%= data[:address] %>
+      <a href="/example/step-2" class="change-link">Change</a>
+    </dd>
+  </dl>
+
+
+      <%
+      susp = data[:suspended]
+      puts susp
+      if susp=="n"
+        %><p><i class="fas fa-info-circle"></i> You <strong>have not</strong> had an Australian High Risk Work license suspended or cancelled since September 2013. (<a href="/example/step-3" class="change-link">Change</a>)</p><%
+      elsif susp=="y"
+        %>
+
+        <p><i class="fas fa-info-circle"></i> You <strong>have</strong> had an Australian High Risk Work license suspended or cancelled since September 2013. (<a href="/example/step-3" class="change-link">Change</a>)</p>
+
+        <dl class="check-answers">
+          <dt>Details</dt>
+          <dd>
+            <%= data[:suspended_details] %>
+            <a href="/example/step-3" class="change-link">Change</a>
+          </dd>
+        </dl><%
+      else
+        puts "Suspended question was answered neither Yes nor No"
+      end
+      %>
+
+      <%
+      susp = data[:as]
+      puts susp
+      if susp=="n"
+        %>
+        <p><i class="fas fa-info-circle"></i> You <strong>have not</strong> previously been issued with an Assessment Summary (AS) by an accredited assessor for the HRW licence class(es) to which this application applies. (<a href="/example/step-4" class="change-link">Change</a>)</p>
+        <%
+      elsif susp=="y"
+        %>
+        <p><i class="fas fa-info-circle"></i> You <strong>have</strong> previously been issued with an Assessment Summary (AS) by an accredited assessor for the HRW licence class(es) to which this application applies. (<a href="/example/step-4" class="change-link">Change</a>)</p>
+        <%
+      else
+        puts "Suspended question was answered neither Yes nor No"
+      end
+      %>
+
+      <%
+      susp = data[:prev]
+      puts susp
+      if susp=="n"
+        %>
+        <p><i class="fas fa-info-circle"></i> You <strong>have not</strong> previously been issued with a Notice of Satisfactory Assessment (NSA) by an accredited assessor for an HRW licence class(es) to which this application applies. (<a href="/example/step-4" class="change-link">Change</a>)</p>
+        <%
+      elsif susp=="y"
+        %>
+        <p><i class="fas fa-info-circle"></i> You <strong>have</strong> previously been issued with a Notice of Satisfactory Assessment (NSA) by an accredited assessor for an HRW licence class(es) to which this application applies. (<a href="/example/step-4" class="change-link">Change</a>)</p>
+        <%
+      else
+        puts "Suspended question was answered neither Yes nor No"
+      end
+      %>
+
+    <fieldset class="actions">
+      <button type="submit">Submit application</button>
+    </fieldset>
+  </form>
+</article>

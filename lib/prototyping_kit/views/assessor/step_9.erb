@@ -1,0 +1,44 @@
+<article>
+  <h1>Assessment results</h1>
+
+  <form action="/assessor/step-10" method="get">
+<h2>Practical results</h2>
+    <fieldset>
+      <div class="form-group">
+        <label for="practical-start">Start time</label>
+        <input type="text"
+                name="practical_start"
+                id="practical-start"
+                class="form-control"
+                style="width: 20em;"
+                value="<%= data[:practical_start] %>">
+      </div>
+
+      <div class="form-group">
+        <label for="practical-end">End time</label>
+        <input type="text"
+                name="practical_end"
+                id="practical-end"
+                class="form-control"
+                style="width: 20em;"
+                value="<%= data[:practical_end] %>">
+      </div>
+
+    <div class="form-group">
+      <label for="practical-extra">Notes or previous AS</label>
+      <input type="text"
+              name="practical_extra"
+              id="practical-extra"
+              class="form-control"
+              value="<%= data[:practical_extra] %>">
+    </div>
+
+</fieldset>
+
+
+
+    <fieldset class="actions">
+      <button type="submit">Next step</button>
+    </fieldset>
+  </form>
+</article>

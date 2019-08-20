@@ -1,0 +1,58 @@
+<article>
+  <h1>Assessment Details</h1>
+  <form action="/assessor/step-6" method="get">
+
+  <h2>Equipment</h2>
+  <dl class="check-answers">
+    <dt>Type</dt>
+    <dd>
+      <%= data[:equipment_type] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Make</dt>
+    <dd>
+      <%= data[:equipment_make] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Capacity</dt>
+    <dd>
+      <%= data[:equipment_capacity] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Serial</dt>
+    <dd>
+      <%= data[:equipment_serial] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+  </dl>
+
+  <h2>Equipment owner</h2>
+  <dl class="check-answers">
+    <dt>Name</dt>
+    <dd>
+      <%= data[:equipment_owner_name] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Address</dt>
+    <dd>
+      <%= data[:equipment_owner_address] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+
+    <dt>Phone number</dt>
+    <dd>
+      <%= data[:equipment_owner_phone] %>
+      <a href="/example/step-3" class="change-link">Change</a>
+    </dd>
+    <fieldset class="actions">
+<h2>Students</h2>
+<p>You have not added any student assessments to this assessment group.</p>
+
+      <button type="submit">Add a student</button>
+    </fieldset>
+  </form>
+</article>
