@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.0)
+    activesupport (5.2.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -12,7 +12,7 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.6)
     digital_nsw_template (0.0.3)
       bootstrap (~> 4.0.0)
       sass (>= 3.5.2)
@@ -21,9 +21,9 @@ GEM
     ffi (1.9.25)
     foreman (0.85.0)
       thor (~> 0.19.1)
-    i18n (1.0.1)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    minitest (5.11.3)
+    minitest (5.14.1)
     mustermann (1.0.2)
     popper_js (1.12.9)
     puma (3.12.4)
@@ -51,7 +51,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    tzinfo (1.2.5)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uglifier (4.1.14)
       execjs (>= 0.3.0, < 3)
@@ -60,7 +60,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 5.2.0)
+  activesupport (~> 5.2.4)
   digital_nsw_template (= 0.0.3)
   foreman
   puma

@@ -6,7 +6,7 @@ else
   gem 'digital_nsw_template', '0.0.3'
 end
 
-gem 'activesupport', '~> 5.2.0'
+gem 'activesupport', '~> 5.2.4'
 gem 'foreman'
 gem 'puma'
 gem 'sinatra'
